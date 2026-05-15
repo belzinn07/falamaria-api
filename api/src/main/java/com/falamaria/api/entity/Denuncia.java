@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,11 +19,13 @@ public class Denuncia {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
+    private String nome;
+    @NotBlank(message = "A descrição é obrigatória")
     private String descricao;
-    private String localizacao;
+    @NotBlank(message = "A localização é obrigatória")
+    private String localizacao; 
     private String contato;
     private String arquivo;
     private LocalDateTime dataEnvio;
     private StatusDenuncia status;
 }
-

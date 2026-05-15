@@ -8,6 +8,7 @@ import lombok.Setter;
 public class DenunciaResponseDTO {
    
     private Long id;
+    private String nome;
     private String descricao;
     private String localizacao;
     private String contato;
