@@ -16,12 +16,11 @@ import com.falamaria.api.repository.DenunciaRepository;
 @Service
 public class DenunciaService {
   private final DenunciaRepository denunciaRepository;
-  //Aqui fazemos a injeção de dependência do `DenunciaRepository` através do construtor da classe `DenunciaService`. Isso permite que o Spring gerencie a criação e a injeção do repositório, facilitando o acesso aos dados das denúncias. Além disso, atingimos o principio da inversão de dependência pois a classe `DenunciaService` depende de uma abstração (`DenunciaRepository`) em vez de uma implementação concreta, o que torna o código mais flexível e testável.
+
   public DenunciaService(DenunciaRepository denunciaRepository){
     this.denunciaRepository = denunciaRepository;
   }
   
-  //pensando arquiteturalmente, em vez de expor diretamente a entidade `Denuncia` para as camadas superiores, como controladores ou clientes, utilizamos os DTOs (`DenunciaRequestDTO` e `DenunciaResponseDTO`) para encapsular os dados de entrada e saída. Isso promove uma separação clara entre a camada de serviço e a camada de apresentação, permitindo que a estrutura interna da entidade `Denuncia` possa ser modificada sem afetar as interfaces externas. Além disso, os DTOs podem ser personalizados para atender às necessidades específicas de cada operação, como criar uma denúncia ou buscar denúncias, sem expor detalhes desnecessários da entidade.
     private Denuncia converterParaDenuncia(DenunciaRequestDTO denunciaRequestDTO){
     Denuncia denuncia = new Denuncia();
     denuncia.setNome(denunciaRequestDTO.getNome());
@@ -49,13 +48,9 @@ public class DenunciaService {
   
   @Transactional
   public DenunciaResponseDTO criarDenuncia(DenunciaRequestDTO denunciaRequestDTO){
-   
    Denuncia denuncia = converterParaDenuncia(denunciaRequestDTO);
    denunciaRepository.save(denuncia);
    return converterParaDto(denuncia);
-
-   //O método `criarDenuncia` recebe um objeto `DenunciaRequestDTO`, converte-o para uma entidade `Denuncia`, salva a entidade no repositório e, em seguida, converte a entidade salva de volta para um `DenunciaResponseDTO` para retornar como resposta.
-
  }
 
  public List<DenunciaResponseDTO> buscarTodasDenuncias(){
@@ -63,11 +58,10 @@ public class DenunciaService {
     return denuncias.stream()
     .map(this::converterParaDto)
     .toList(); 
-   
   }
 
   @Transactional(readOnly = true)
- public DenunciaResponseDTO buscarDenunciaPorId(Long id){
+public DenunciaResponseDTO buscarDenunciaPorId(Long id){
     Denuncia denuncia = denunciaRepository.findById(id)
         .orElseThrow(() -> new DenunciaNaoEncontradaException("Denúncia com ID " + id + " não encontrada."));
     return converterParaDto(denuncia);
@@ -75,11 +69,11 @@ public class DenunciaService {
 
 @Transactional
 public DenunciaResponseDTO atualizarStatusDenuncia(Long id, StatusDenuncia status){
-    Denuncia denuncia = denunciaRepository.findById(id).orElseThrow(() -> new DenunciaNaoEncontradaException("Denúncia com ID " + id + " não encontrada."));
+    Denuncia denuncia = denunciaRepository.findById(id)
+    .orElseThrow(() -> new DenunciaNaoEncontradaException("Denúncia com ID " + id + " não encontrada."));
     denuncia.setStatus(status);
     denunciaRepository.save(denuncia);
     return converterParaDto(denuncia);
-    //O método `atualizarStatusDenuncia` recebe um ID e um novo status, busca a denúncia correspondente no repositório, atualiza o status da denúncia, salva a entidade atualizada de volta no repositório e retorna a denúncia atualizada como um `DenunciaResponseDTO`.
-    }
+}
 
 }
