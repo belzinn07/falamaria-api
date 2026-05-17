@@ -25,6 +25,7 @@ public class SecurityConfig {
             // 3. Regras de autorização
             .authorizeHttpRequests(authorize -> authorize
                 .anyRequest().permitAll() // Por enquanto, libera todas as rotas para você testar no Postman
+                  
             )
             .build();
     }

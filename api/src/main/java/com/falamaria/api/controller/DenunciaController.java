@@ -30,17 +30,17 @@ public class DenunciaController {
         return ResponseEntity.ok(service.criarDenuncia(request));
     }
 
-    @GetMapping
+    @GetMapping("/admin")
     public ResponseEntity<List<DenunciaResponseDTO>> buscarTodas() {
         return ResponseEntity.ok(service.buscarTodasDenuncias());
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/admin/{id}")
     public ResponseEntity<DenunciaResponseDTO> buscarPorId(@PathVariable Long id) {
         return ResponseEntity.ok(service.buscarDenunciaPorId(id));
     }
 
-    @PatchMapping("/{id}/status")
+    @PatchMapping("/admin/{id}/status")
     public ResponseEntity<DenunciaResponseDTO> atualizarStatus(@PathVariable Long id, @RequestParam StatusDenuncia status) {
         return ResponseEntity.ok(service.atualizarStatusDenuncia(id, status));
     }
