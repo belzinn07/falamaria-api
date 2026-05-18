@@ -3,8 +3,8 @@ package com.falamaria.api.service;
 import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.falamaria.api.dto.DenunciaRequestDTO;
-import com.falamaria.api.dto.DenunciaResponseDTO;
+import com.falamaria.api.dto.DenunciaRequest;
+import com.falamaria.api.dto.DenunciaResponse;
 import com.falamaria.api.entity.Denuncia;
 import com.falamaria.api.entity.StatusDenuncia;
 import com.falamaria.api.exception.DenunciaNaoEncontradaException;
@@ -22,13 +22,14 @@ public class DenunciaService {
   }
 
   @Transactional
-  public DenunciaResponseDTO criarDenuncia(DenunciaRequestDTO denunciaRequestDTO) {
-    Denuncia denuncia = denunciaMapper.converterParaDenuncia(denunciaRequestDTO);
+  public DenunciaResponse criarDenuncia(DenunciaRequest denunciaRequest) {
+    Denuncia denuncia = denunciaMapper.converterParaEntidade(denunciaRequest);
     denunciaRepository.save(denuncia);
     return denunciaMapper.converterParaDto(denuncia);
   }
 
-  public List<DenunciaResponseDTO> buscarTodasDenuncias() {
+  @Transactional(readOnly = true)
+  public List<DenunciaResponse> buscarTodasDenuncias() {
     List<Denuncia> denuncias = denunciaRepository.findAll();
     return denuncias.stream()
         .map(denunciaMapper::converterParaDto)
@@ -36,14 +37,21 @@ public class DenunciaService {
   }
 
   @Transactional(readOnly = true)
-  public DenunciaResponseDTO buscarDenunciaPorId(Long id) {
+  public DenunciaResponse buscarDenunciaPorId(Long id) {
     Denuncia denuncia = denunciaRepository.findById(id)
         .orElseThrow(() -> new DenunciaNaoEncontradaException("Denúncia com ID " + id + " não encontrada."));
     return denunciaMapper.converterParaDto(denuncia);
   }
 
+  @Transactional(readOnly = true)
+  public List<DenunciaResponse> buscarDenunciasPorStatus(StatusDenuncia status) {
+    return denunciaRepository.findByStatus(status).stream()
+        .map(denunciaMapper::converterParaDto)
+        .toList();
+  }
+
   @Transactional
-  public DenunciaResponseDTO atualizarStatusDenuncia(Long id, StatusDenuncia status) {
+  public DenunciaResponse atualizarStatusDenuncia(Long id, StatusDenuncia status) {
     Denuncia denuncia = denunciaRepository.findById(id)
         .orElseThrow(() -> new DenunciaNaoEncontradaException("Denúncia com ID " + id + " não encontrada."));
     denuncia.setStatus(status);

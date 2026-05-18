@@ -5,15 +5,11 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class DenunciaResponseDTO {
-   
-    private Long id;
+public class DenunciaRequest{
     private String nome;
     private String descricao;
     private String localizacao;
     private String contato;
     private String arquivo;
-    private String dataEnvio;
-    private String status;
-    
+
 }

@@ -4,45 +4,45 @@ import java.time.LocalDateTime;
 
 import org.springframework.stereotype.Component;
 
-import com.falamaria.api.dto.DenunciaRequestDTO;
-import com.falamaria.api.dto.DenunciaResponseDTO;
+import com.falamaria.api.dto.DenunciaRequest;
+import com.falamaria.api.dto.DenunciaResponse;
 import com.falamaria.api.entity.Denuncia;
 import com.falamaria.api.entity.StatusDenuncia;
 
 @Component
 public class DenunciaMapper {
 
-    public Denuncia converterParaDenuncia(DenunciaRequestDTO denunciaRequestDTO) {
-        if (denunciaRequestDTO == null){
+    public Denuncia converterParaEntidade(DenunciaRequest denunciaRequest) {
+        if (denunciaRequest == null){
             return null;
         }    
 
         Denuncia denuncia = new Denuncia();
-        denuncia.setNome(denunciaRequestDTO.getNome());
-        denuncia.setDescricao(denunciaRequestDTO.getDescricao());
-        denuncia.setLocalizacao(denunciaRequestDTO.getLocalizacao());
-        denuncia.setContato(denunciaRequestDTO.getContato());
-        denuncia.setArquivo(denunciaRequestDTO.getArquivo());
+        denuncia.setNome(denunciaRequest.getNome());
+        denuncia.setDescricao(denunciaRequest.getDescricao());
+        denuncia.setLocalizacao(denunciaRequest.getLocalizacao());
+        denuncia.setContato(denunciaRequest.getContato());
+        denuncia.setArquivo(denunciaRequest.getArquivo());
         denuncia.setDataEnvio(LocalDateTime.now());
         denuncia.setStatus(StatusDenuncia.PENDENTE);
         return denuncia;
     }
 
-    public DenunciaResponseDTO converterParaDto(Denuncia denuncia) {
+    public DenunciaResponse converterParaDto(Denuncia denuncia) {
         if (denuncia == null){
             return null;
         }    
 
-        DenunciaResponseDTO responseDTO = new DenunciaResponseDTO();
-        responseDTO.setId(denuncia.getId());
-        responseDTO.setNome(denuncia.getNome());
-        responseDTO.setDescricao(denuncia.getDescricao());
-        responseDTO.setLocalizacao(denuncia.getLocalizacao());
-        responseDTO.setContato(denuncia.getContato());
-        responseDTO.setArquivo(denuncia.getArquivo());
-        responseDTO.setDataEnvio(denuncia.getDataEnvio().toString());
-        responseDTO.setStatus(denuncia.getStatus().toString());
-        return responseDTO;
+        DenunciaResponse response = new DenunciaResponse();
+        response.setId(denuncia.getId());
+        response.setNome(denuncia.getNome());
+        response.setDescricao(denuncia.getDescricao());
+        response.setLocalizacao(denuncia.getLocalizacao());
+        response.setContato(denuncia.getContato());
+        response.setArquivo(denuncia.getArquivo());
+        response.setDataEnvio(denuncia.getDataEnvio().toString());
+        response.setStatus(denuncia.getStatus().toString());
+        return response;
     }
 
 }
