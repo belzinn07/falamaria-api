@@ -7,7 +7,7 @@ import com.falamaria.api.dto.DenunciaRequest;
 import com.falamaria.api.dto.DenunciaResponse;
 import com.falamaria.api.entity.Denuncia;
 import com.falamaria.api.entity.StatusDenuncia;
-import com.falamaria.api.exception.DenunciaNaoEncontradaException;
+import com.falamaria.api.exception.ItemNaoEncontradoException;
 import com.falamaria.api.mapper.DenunciaMapper;
 import com.falamaria.api.repository.DenunciaRepository;
 
@@ -39,7 +39,7 @@ public class DenunciaService {
   @Transactional(readOnly = true)
   public DenunciaResponse buscarDenunciaPorId(Long id) {
     Denuncia denuncia = denunciaRepository.findById(id)
-        .orElseThrow(() -> new DenunciaNaoEncontradaException("Denúncia com ID " + id + " não encontrada."));
+        .orElseThrow(() -> new ItemNaoEncontradoException("Denúncia com ID " + id + " não encontrada."));
     return denunciaMapper.converterParaDto(denuncia);
   }
 
@@ -53,7 +53,7 @@ public class DenunciaService {
   @Transactional
   public DenunciaResponse atualizarStatusDenuncia(Long id, StatusDenuncia status) {
     Denuncia denuncia = denunciaRepository.findById(id)
-        .orElseThrow(() -> new DenunciaNaoEncontradaException("Denúncia com ID " + id + " não encontrada."));
+        .orElseThrow(() -> new ItemNaoEncontradoException("Denúncia com ID " + id + " não encontrada."));
     denuncia.setStatus(status);
     return denunciaMapper.converterParaDto(denuncia);
   }
