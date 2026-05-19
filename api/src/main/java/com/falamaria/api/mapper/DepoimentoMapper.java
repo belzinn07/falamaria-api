@@ -2,10 +2,13 @@ package com.falamaria.api.mapper;
 
 import java.time.LocalDateTime;
 
+import org.springframework.stereotype.Component;
+
 import com.falamaria.api.dto.DepoimentoRequest;
 import com.falamaria.api.dto.DepoimentoResponse;
 import com.falamaria.api.entity.Depoimento;
 
+@Component
 public class DepoimentoMapper {
 
     public Depoimento converterParaEntidade(DepoimentoRequest request) {

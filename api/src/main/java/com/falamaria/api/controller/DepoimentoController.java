@@ -3,8 +3,11 @@ package com.falamaria.api.controller;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,13 +26,18 @@ public class DepoimentoController {
     } 
 
     @PostMapping
-    public ResponseEntity<DepoimentoResponse> criar(DepoimentoRequest request){
+    public ResponseEntity<DepoimentoResponse> criar(@RequestBody DepoimentoRequest request){
         return ResponseEntity.ok(service.criarDepoimento(request));
     }
-    
+
     @GetMapping("/admin")
     public ResponseEntity<List<DepoimentoResponse>> buscarTodos(){
         return ResponseEntity.ok(service.buscarTodosDepoimentos());
+    }
+
+    @DeleteMapping("/admin/{id}")
+    public ResponseEntity<DepoimentoResponse> excluir(@PathVariable Long id){
+        return ResponseEntity.ok(service.excluirDepoimento(id));
     }
 
 }
