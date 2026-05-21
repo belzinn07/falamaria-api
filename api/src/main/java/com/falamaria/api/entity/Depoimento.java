@@ -2,6 +2,7 @@ package com.falamaria.api.entity;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,9 +27,11 @@ public class Depoimento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false, length = 100)
     private String nome;
-    @NotBlank(message = "A mensagem é obrigatória")
+    @Column(nullable = false)
     private String mensagem;
+    @Column(nullable = false)
     private LocalDateTime dataEnvio;
     
 }

@@ -2,6 +2,7 @@ package com.falamaria.api.entity;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -9,7 +10,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -28,12 +28,15 @@ public class Denuncia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false, length = 255)
     private String nome;
-    @NotBlank(message = "A descrição é obrigatória")
+    @Column(nullable = false)
     private String descricao;
-    @NotBlank(message = "A localização é obrigatória")
-    private String localizacao; 
+    @Column(nullable = false, length = 255)
+    private String localizacao;
+    @Column(nullable = false, length = 255)
     private String contato;
+    @Column(nullable = false, length = 255)
     private String arquivo;
     private LocalDateTime dataEnvio;
     @Enumerated(EnumType.STRING)
