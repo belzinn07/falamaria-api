@@ -28,15 +28,15 @@ public class Denuncia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false, length = 255)
+    @Column(length = 255)
     private String nome;
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String descricao;
     @Column(nullable = false, length = 255)
     private String localizacao;
-    @Column(nullable = false, length = 255)
+    @Column(length = 255)
     private String contato;
-    @Column(nullable = false, length = 255)
+    @Column(length = 255)
     private String arquivo;
     private LocalDateTime dataEnvio;
     @Enumerated(EnumType.STRING)

@@ -1,0 +1,407 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.falamaria:api >--------------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.6:run (default-cli) > test-compile @ api >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ api ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ api ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ api ---
+[INFO] skip non existing resourceDirectory C:\DEV\Java\falamaria-api\api\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ api ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.0.6:run (default-cli) < test-compile @ api <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.6:run (default-cli) @ api ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-09-05T23:07:20.065-03:00  INFO 23512 --- [api] [  restartedMain] com.falamaria.api.ApiApplication         : Starting ApiApplication using Java 17.0.11 with PID 23512 (C:\DEV\Java\falamaria-api\api\target\classes started by netob in C:\DEV\Java\falamaria-api\api)
+2026-09-05T23:07:20.072-03:00  INFO 23512 --- [api] [  restartedMain] com.falamaria.api.ApiApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-05T23:07:20.174-03:00  INFO 23512 --- [api] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-05T23:07:20.174-03:00  INFO 23512 --- [api] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-05T23:07:21.306-03:00  INFO 23512 --- [api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-05T23:07:21.415-03:00  INFO 23512 --- [api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 4 JPA repository interfaces.
+2026-09-05T23:07:22.348-03:00  INFO 23512 --- [api] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-05T23:07:22.365-03:00  INFO 23512 --- [api] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-05T23:07:22.365-03:00  INFO 23512 --- [api] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-05T23:07:22.431-03:00  INFO 23512 --- [api] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2252 ms
+2026-09-05T23:07:22.609-03:00  INFO 23512 --- [api] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-05T23:07:22.717-03:00  INFO 23512 --- [api] [  restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-09-05T23:07:23.470-03:00  INFO 23512 --- [api] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-05T23:07:23.529-03:00  INFO 23512 --- [api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-05T23:07:23.837-03:00  INFO 23512 --- [api] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33378c87
+2026-09-05T23:07:23.837-03:00  INFO 23512 --- [api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-05T23:07:23.898-03:00  WARN 23512 --- [api] [  restartedMain] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-09-05T23:07:23.914-03:00  WARN 23512 --- [api] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-05T23:07:23.930-03:00  INFO 23512 --- [api] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/falamaria_db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: falamaria_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-05T23:07:25.472-03:00  INFO 23512 --- [api] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-05T23:07:25.599-03:00  INFO 23512 --- [api] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-05T23:07:25.692-03:00  INFO 23512 --- [api] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-05T23:07:26.130-03:00  INFO 23512 --- [api] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name authorizationService
+2026-09-05T23:07:26.251-03:00  WARN 23512 --- [api] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-05T23:07:27.032-03:00  INFO 23512 --- [api] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-05T23:07:27.035-03:00  INFO 23512 --- [api] [  restartedMain] com.falamaria.api.ApiApplication         : Started ApiApplication in 7.693 seconds (process running for 8.514)
+2026-09-05T23:08:09.813-03:00  INFO 23512 --- [api] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-05T23:08:09.813-03:00  INFO 23512 --- [api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-05T23:08:09.815-03:00  INFO 23512 --- [api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.password,
+        a1_0.username 
+    from
+        admins a1_0 
+    where
+        a1_0.username=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.password,
+        a1_0.username 
+    from
+        admins a1_0 
+    where
+        a1_0.username=?
+2026-09-05T23:08:11.781-03:00  WARN 23512 --- [api] [nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.falamaria.api.dto.LoginResponse> com.falamaria.api.controller.AuthController.login(com.falamaria.api.dto.LoginRequest) with 2 errors: [Field error in object 'loginRequest' on field 'username': rejected value [null]; codes [NotBlank.loginRequest.username,NotBlank.username,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.username,username]; arguments []; default message [username]]; default message [O nome de usuário é obrigatório]] [Field error in object 'loginRequest' on field 'senha': rejected value [null]; codes [NotBlank.loginRequest.senha,NotBlank.senha,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.senha,senha]; arguments []; default message [senha]]; default message [A senha é obrigatória]] ]
+Hibernate: 
+    insert 
+    into
+        denuncias
+        (arquivo, contato, data_envio, descricao, localizacao, nome, status) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-09-05T23:08:12.214-03:00  WARN 23512 --- [api] [nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('d' (code 100)): was expecting double-quote to start property name]
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.data_envio,
+        d1_0.mensagem,
+        d1_0.nome 
+    from
+        depoimentos d1_0
+Hibernate: 
+    insert 
+    into
+        depoimentos
+        (data_envio, mensagem, nome) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        feedbacks
+        (data_envio, nome, nota, sugestao) 
+    values
+        (?, ?, ?, ?)
+2026-09-05T23:08:12.457-03:00  WARN 23512 --- [api] [nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('s' (code 115)): was expecting double-quote to start property name]
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.password,
+        a1_0.username 
+    from
+        admins a1_0 
+    where
+        a1_0.username=?
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.arquivo,
+        d1_0.contato,
+        d1_0.data_envio,
+        d1_0.descricao,
+        d1_0.localizacao,
+        d1_0.nome,
+        d1_0.status 
+    from
+        denuncias d1_0
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.password,
+        a1_0.username 
+    from
+        admins a1_0 
+    where
+        a1_0.username=?
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.arquivo,
+        d1_0.contato,
+        d1_0.data_envio,
+        d1_0.descricao,
+        d1_0.localizacao,
+        d1_0.nome,
+        d1_0.status 
+    from
+        denuncias d1_0 
+    where
+        d1_0.id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.password,
+        a1_0.username 
+    from
+        admins a1_0 
+    where
+        a1_0.username=?
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.arquivo,
+        d1_0.contato,
+        d1_0.data_envio,
+        d1_0.descricao,
+        d1_0.localizacao,
+        d1_0.nome,
+        d1_0.status 
+    from
+        denuncias d1_0 
+    where
+        d1_0.status=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.password,
+        a1_0.username 
+    from
+        admins a1_0 
+    where
+        a1_0.username=?
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.arquivo,
+        d1_0.contato,
+        d1_0.data_envio,
+        d1_0.descricao,
+        d1_0.localizacao,
+        d1_0.nome,
+        d1_0.status 
+    from
+        denuncias d1_0 
+    where
+        d1_0.id=?
+Hibernate: 
+    update
+        denuncias 
+    set
+        arquivo=?,
+        contato=?,
+        data_envio=?,
+        descricao=?,
+        localizacao=?,
+        nome=?,
+        status=? 
+    where
+        id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.password,
+        a1_0.username 
+    from
+        admins a1_0 
+    where
+        a1_0.username=?
+Hibernate: 
+    select
+        f1_0.id,
+        f1_0.data_envio,
+        f1_0.nome,
+        f1_0.nota,
+        f1_0.sugestao 
+    from
+        feedbacks f1_0
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.password,
+        a1_0.username 
+    from
+        admins a1_0 
+    where
+        a1_0.username=?
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.data_envio,
+        d1_0.mensagem,
+        d1_0.nome 
+    from
+        depoimentos d1_0 
+    where
+        d1_0.id=?
+Hibernate: 
+    delete 
+    from
+        depoimentos 
+    where
+        id=?
+2026-09-05T23:08:37.253-03:00  WARN 23512 --- [api] [nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.falamaria.api.dto.DenunciaResponse> com.falamaria.api.controller.DenunciaController.criar(com.falamaria.api.dto.DenunciaRequest): [Field error in object 'denunciaRequest' on field 'localizacao': rejected value [null]; codes [NotBlank.denunciaRequest.localizacao,NotBlank.localizacao,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [denunciaRequest.localizacao,localizacao]; arguments []; default message [localizacao]]; default message [A localização é obrigatória]] ]
+2026-09-05T23:08:37.423-03:00  WARN 23512 --- [api] [nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.falamaria.api.dto.DenunciaResponse> com.falamaria.api.controller.DenunciaController.criar(com.falamaria.api.dto.DenunciaRequest): [Field error in object 'denunciaRequest' on field 'localizacao': rejected value [null]; codes [NotBlank.denunciaRequest.localizacao,NotBlank.localizacao,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [denunciaRequest.localizacao,localizacao]; arguments []; default message [localizacao]]; default message [A localização é obrigatória]] ]
+2026-09-05T23:08:37.468-03:00  WARN 23512 --- [api] [io-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.falamaria.api.dto.FeedbackResponse> com.falamaria.api.controller.FeedbackController.criar(com.falamaria.api.dto.FeedbackRequest): [Field error in object 'feedbackRequest' on field 'nota': rejected value [null]; codes [NotNull.feedbackRequest.nota,NotNull.nota,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [feedbackRequest.nota,nota]; arguments []; default message [nota]]; default message [Nota é obrigatória]] ]
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.password,
+        a1_0.username 
+    from
+        admins a1_0 
+    where
+        a1_0.username=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.password,
+        a1_0.username 
+    from
+        admins a1_0 
+    where
+        a1_0.username=?
+2026-09-05T23:14:13.395-03:00  INFO 23512 --- [api] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-05T23:14:13.409-03:00  INFO 23512 --- [api] [       Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-05T23:14:13.670-03:00  INFO 23512 --- [api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-05T23:14:13.678-03:00  INFO 23512 --- [api] [       Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-05T23:14:13.686-03:00  INFO 23512 --- [api] [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-05T23:14:13.702-03:00  INFO 23512 --- [api] [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-09-05T23:14:14.092-03:00  INFO 23512 --- [api] [  restartedMain] com.falamaria.api.ApiApplication         : Starting ApiApplication using Java 17.0.11 with PID 23512 (C:\DEV\Java\falamaria-api\api\target\classes started by netob in C:\DEV\Java\falamaria-api\api)
+2026-09-05T23:14:14.092-03:00  INFO 23512 --- [api] [  restartedMain] com.falamaria.api.ApiApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-05T23:14:14.635-03:00  INFO 23512 --- [api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-05T23:14:14.667-03:00  INFO 23512 --- [api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 4 JPA repository interfaces.
+2026-09-05T23:14:14.963-03:00  INFO 23512 --- [api] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-05T23:14:14.966-03:00  INFO 23512 --- [api] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-05T23:14:14.966-03:00  INFO 23512 --- [api] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-05T23:14:14.997-03:00  INFO 23512 --- [api] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 901 ms
+2026-09-05T23:14:15.052-03:00  INFO 23512 --- [api] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-05T23:14:15.144-03:00  INFO 23512 --- [api] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-05T23:14:15.160-03:00  INFO 23512 --- [api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-09-05T23:14:15.164-03:00  INFO 23512 --- [api] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a788d75
+2026-09-05T23:14:15.164-03:00  INFO 23512 --- [api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-09-05T23:14:15.175-03:00  WARN 23512 --- [api] [  restartedMain] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-09-05T23:14:15.181-03:00  WARN 23512 --- [api] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-05T23:14:15.183-03:00  INFO 23512 --- [api] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/falamaria_db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: falamaria_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-05T23:14:15.407-03:00  INFO 23512 --- [api] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-05T23:14:15.732-03:00  INFO 23512 --- [api] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-05T23:14:15.880-03:00  INFO 23512 --- [api] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name authorizationService
+2026-09-05T23:14:15.999-03:00  WARN 23512 --- [api] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-05T23:14:16.403-03:00  INFO 23512 --- [api] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-05T23:14:16.409-03:00  INFO 23512 --- [api] [  restartedMain] com.falamaria.api.ApiApplication         : Started ApiApplication in 2.375 seconds (process running for 417.884)
+2026-09-05T23:14:16.412-03:00  INFO 23512 --- [api] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-05T23:14:17.817-03:00  INFO 23512 --- [api] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-05T23:14:17.817-03:00  INFO 23512 --- [api] [       Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-05T23:14:18.037-03:00  INFO 23512 --- [api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-05T23:14:18.042-03:00  INFO 23512 --- [api] [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-05T23:14:18.042-03:00  INFO 23512 --- [api] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-09-05T23:14:18.048-03:00  INFO 23512 --- [api] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-09-05T23:14:18.177-03:00  INFO 23512 --- [api] [  restartedMain] com.falamaria.api.ApiApplication         : Starting ApiApplication using Java 17.0.11 with PID 23512 (C:\DEV\Java\falamaria-api\api\target\classes started by netob in C:\DEV\Java\falamaria-api\api)
+2026-09-05T23:14:18.177-03:00  INFO 23512 --- [api] [  restartedMain] com.falamaria.api.ApiApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-05T23:14:18.595-03:00  INFO 23512 --- [api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-05T23:14:18.676-03:00  INFO 23512 --- [api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces.
+2026-09-05T23:14:18.810-03:00  INFO 23512 --- [api] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-05T23:14:18.810-03:00  INFO 23512 --- [api] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-05T23:14:18.812-03:00  INFO 23512 --- [api] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-05T23:14:18.831-03:00  INFO 23512 --- [api] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 650 ms
+2026-09-05T23:14:18.879-03:00  INFO 23512 --- [api] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-05T23:14:18.928-03:00  INFO 23512 --- [api] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-05T23:14:18.928-03:00  INFO 23512 --- [api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-09-05T23:14:18.928-03:00  INFO 23512 --- [api] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@36a51137
+2026-09-05T23:14:18.928-03:00  INFO 23512 --- [api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-09-05T23:14:18.928-03:00  WARN 23512 --- [api] [  restartedMain] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-09-05T23:14:18.928-03:00  WARN 23512 --- [api] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-05T23:14:18.928-03:00  INFO 23512 --- [api] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/falamaria_db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: falamaria_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-05T23:14:19.063-03:00  INFO 23512 --- [api] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-05T23:14:19.123-03:00  INFO 23512 --- [api] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-05T23:14:19.229-03:00  INFO 23512 --- [api] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name authorizationService
+2026-09-05T23:14:19.365-03:00  WARN 23512 --- [api] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-05T23:14:19.560-03:00  INFO 23512 --- [api] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-05T23:14:19.560-03:00  INFO 23512 --- [api] [  restartedMain] com.falamaria.api.ApiApplication         : Started ApiApplication in 1.415 seconds (process running for 421.049)
+2026-09-05T23:14:19.576-03:00  INFO 23512 --- [api] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  07:34 min
+[INFO] Finished at: 2026-09-05T23:14:49-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:4.0.6:run (default-cli) on project api: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

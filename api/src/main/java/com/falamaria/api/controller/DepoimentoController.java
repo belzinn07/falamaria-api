@@ -15,6 +15,8 @@ import com.falamaria.api.dto.DepoimentoRequest;
 import com.falamaria.api.dto.DepoimentoResponse;
 import com.falamaria.api.service.DepoimentoService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/depoimentos")
 public class DepoimentoController {
@@ -26,18 +28,14 @@ public class DepoimentoController {
     } 
 
     @PostMapping
-    public ResponseEntity<DepoimentoResponse> criar(@RequestBody DepoimentoRequest request){
+    public ResponseEntity<DepoimentoResponse> criar(@Valid @RequestBody DepoimentoRequest request){
         return ResponseEntity.ok(service.criarDepoimento(request));
     }
 
-    @GetMapping("/admin")
+    @GetMapping
     public ResponseEntity<List<DepoimentoResponse>> buscarTodos(){
         return ResponseEntity.ok(service.buscarTodosDepoimentos());
     }
 
-    @DeleteMapping("/admin/{id}")
-    public ResponseEntity<DepoimentoResponse> excluir(@PathVariable Long id){
-        return ResponseEntity.ok(service.excluirDepoimento(id));
-    }
 
 }

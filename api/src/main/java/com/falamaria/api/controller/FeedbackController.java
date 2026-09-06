@@ -13,6 +13,8 @@ import com.falamaria.api.dto.FeedbackRequest;
 import com.falamaria.api.dto.FeedbackResponse;
 import com.falamaria.api.service.FeedbackService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/feedbacks")
 public class FeedbackController {
@@ -23,7 +25,7 @@ public class FeedbackController {
     }
 
     @PostMapping
-    public ResponseEntity<FeedbackResponse> criar(@RequestBody FeedbackRequest request){
+    public ResponseEntity<FeedbackResponse> criar(@Valid @RequestBody FeedbackRequest request){
         return ResponseEntity.ok(service.criarFeedback(request));
     }
 
